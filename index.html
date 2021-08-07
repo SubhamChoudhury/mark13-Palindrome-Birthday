@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Palindrome Birthday</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">S</a>
+              </div>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="https://www.linkedin.com/in/subham-choudhury/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://github.com/SubhamChoudhury" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://twitter.com/SubhamC_14" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                    <li><a href="https://www.instagram.com/the_skywalker_14/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                </ul>
+            </nav>
+            <img src="images/menu.png" alt="menu" class="menu" onclick="{togglemenu()}">
+        </div>
+        <div class="row">
+            <div class="col-1">
+                <h1>Palindrome Birthday</h1>
+                <h3> Is your birthday a <strong>Palindrome?</strong></h3>
+              
+                <input id="date-input" type="date" required><br/>
+                <button class="button" id="check-btn"> Check Now <img src="images/arrow.png"></button>
+                <div id="loader"><img src="./images/clock.gif "style="width: 250px; height: 180px;" ></div>
+           
+            <div class="output" id="output">
+            </div>
+            </div>
+            <div class="col-2">
+               <img src="images/gifts.svg" class="gifts">
+               <div class="color-box"></div>
+            </div>
+        </div>
+    </div>
+    <div class="about">
+        <p class="center">
+          A <strong> Palindrome </strong> is a word, phrase, number, or other sequence of characters which reads the same backward or forward.
+        </p>
+      </div>
+    <script src="script.js"></script>
+</body>
+</html>
