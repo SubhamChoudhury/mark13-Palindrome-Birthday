@@ -141,6 +141,7 @@ button:hover {
   margin-top: 20px;
   color: #000;
   font-weight: bold;
+  padding: 5px;
   
 }
 
@@ -200,10 +201,10 @@ button:hover {
     flex-basis: 100%;
   }
   .about{
-      height: 10%;
+      height: 8%;
   }
   .center {
-    width: 80%;
-    padding: 1rem;
+    width: 90%;
+    padding: 0.2rem;
   }
 }
