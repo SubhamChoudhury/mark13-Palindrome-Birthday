@@ -10,18 +10,14 @@ function togglemenu() {
 const birthDate = document.querySelector("#date-input");
 const checkBtn = document.querySelector("#check-btn");
 function reverseString(word){
-  // console.log(word);
   word = word.split("");
   var rev = "";
   while(word.length !=0){
       rev += word.pop();
   }
-  // console.log("reverseDate: "+rev);
   return rev;
  
 }
-
-// console.log(reverseString("string"));
 
 function checkPalindrome(date){
   const [year,month,day] = date.split("-");
@@ -67,9 +63,6 @@ function findNextNearPalindromeDate(date){
 
   while(true){
       noOfDays++;
-      // console.log("day: "+day);
-      // console.log("month: "+month);
-      // console.log("year: "+year);
       ++day;
       if(day === daysInMonth[month-1]+1){
           day = 1;
@@ -81,7 +74,6 @@ function findNextNearPalindromeDate(date){
       }
      
       var yyyymmdd = year +"-"+ (month<=9?("0".concat(month)):month).toString() +"-"+ ( day<=9?"0".concat(day.toString()):day ).toString() ;
-      console.log(yyyymmdd);
       var [formate , flag] = checkPalindrome(yyyymmdd);
       if(flag){
           nextDate = formate;
@@ -118,17 +110,16 @@ function clickHandler(){
       var [formate,state] = checkPalindrome(birthDate.value);
       var outputDate = formate;
       if(state){
+         document.getElementById("output").style.border = "2px solid #ff54a2";
           document.getElementById("output").innerText = "Woohooo!!! You Birthday is a Palindrome 🎊🥳 in "+ outputDate + "format";
       }
       else{
            var nearDate = findNextNearPalindromeDate(birthDate.value);
+           document.getElementById("output").style.border = "2px solid #ff54a2";
            document.getElementById("output").innerText = "Oops!!! Your birthday is not a palindrome . Nearest palindrome date is "+ nearDate +" which comes after "+noOfDays + " days 😊";
       }
   
 }
-
-
-// Buttons Event Listener 
 
 checkBtn.addEventListener("click",()=>{
  
